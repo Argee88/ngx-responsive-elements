@@ -11,7 +11,7 @@ import {
 })
 export class ResponsiveElementDirective implements OnInit {
     @Input() sizeMap = null;
-    defaultCssClass = 'default';
+    @Input() defaultCssClass = 'default';
     oldCssClass: string = null;
     constructor(private hostElement: ElementRef) {}
 
