@@ -12,6 +12,12 @@ import { By } from '@angular/platform-browser';
             ngxReResponsiveElement
             [sizeMap]="{ '500': 'medium', '300': 'small', '700': 'large' }"
         ></div>
+        <div
+            id="size-map-and-default"
+            ngxReResponsiveElement
+            defaultCssClass="test"
+            [sizeMap]="{ '500': 'medium', '300': 'small', '700': 'large' }"
+        ></div>
     `,
 })
 class DirectiveHostComponent {}
@@ -31,6 +37,24 @@ describe('ResponsiveElementDirective', () => {
         expect(fixture).toBeTruthy();
     });
 
+    describe('should be possible to define a default css class', () => {
+        let dEs;
+        let dE;
+        beforeEach(() => {
+            dEs = fixture.debugElement.queryAll(
+                By.directive(ResponsiveElementDirective)
+            );
+            dE = dEs.filter(
+                tempDE => tempDE.attributes.id === 'size-map-and-default'
+            )[0];
+            directive = dE.injector.get(ResponsiveElementDirective);
+            directive.defaultCssClass = 'test';
+        });
+        it('should be possible to define a default css class', () => {
+            expect(directive.defaultCssClass).toBe('test');
+        });
+    });
+
     describe('onResize', () => {
         let dE;
         let sizeMapValues;
@@ -40,6 +64,7 @@ describe('ResponsiveElementDirective', () => {
             );
             dE = dEs.filter(tempDE => tempDE.attributes.id === 'size-map')[0];
             directive = dE.injector.get(ResponsiveElementDirective);
+            console.log(directive);
 
             sizeMap = {
                 500: 'medium',
