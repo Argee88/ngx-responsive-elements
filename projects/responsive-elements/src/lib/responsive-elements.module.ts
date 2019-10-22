@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ResponsiveElementsComponent } from './responsive-elements.component';
 import { ResponsiveElementDirective } from './responsive-element.directive';
 
 @NgModule({
-    declarations: [ResponsiveElementsComponent, ResponsiveElementDirective],
+    declarations: [ResponsiveElementDirective],
     imports: [],
-    exports: [ResponsiveElementsComponent, ResponsiveElementDirective],
+    exports: [ResponsiveElementDirective],
 })
 export class ResponsiveElementsModule {}
