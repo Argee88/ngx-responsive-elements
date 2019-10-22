@@ -1,42 +1,41 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "responsive-elements": {
-      "projectType": "library",
-      "root": "projects/responsive-elements",
-      "sourceRoot": "projects/responsive-elements/src",
-      "prefix": "re",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/responsive-elements/tsconfig.lib.json",
-            "project": "projects/responsive-elements/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/responsive-elements/src/test.ts",
-            "tsConfig": "projects/responsive-elements/tsconfig.spec.json",
-            "karmaConfig": "projects/responsive-elements/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/responsive-elements/tsconfig.lib.json",
-              "projects/responsive-elements/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "ngx-responsive-elements": {
+            "projectType": "library",
+            "root": "projects/ngx-responsive-elements",
+            "sourceRoot": "projects/ngx-responsive-elements/src",
+            "prefix": "ngx-re",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/ngx-responsive-elements/tsconfig.lib.json",
+                        "project": "projects/ngx-responsive-elements/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ngx-responsive-elements/src/test.ts",
+                        "tsConfig": "projects/ngx-responsive-elements/tsconfig.spec.json",
+                        "karmaConfig": "projects/ngx-responsive-elements/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/ngx-responsive-elements/tsconfig.lib.json",
+                            "projects/ngx-responsive-elements/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**"]
+                    }
+                }
+            }
         }
-      }
-    }},
-  "defaultProject": "responsive-elements"
+    },
+    "defaultProject": "ngx-responsive-elements"
 }

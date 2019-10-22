@@ -24,6 +24,12 @@
       ],
       "responsive-elements/*": [
         "dist/responsive-elements/*"
+      ],
+      "ngx-responsive-elements": [
+        "dist/ngx-responsive-elements"
+      ],
+      "ngx-responsive-elements/*": [
+        "dist/ngx-responsive-elements/*"
       ]
     }
   },
