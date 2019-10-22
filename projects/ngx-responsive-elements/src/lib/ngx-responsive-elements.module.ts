@@ -4,6 +4,6 @@ import { ResponsiveElementDirective } from './responsive-element.directive';
 @NgModule({
     declarations: [ResponsiveElementDirective],
     imports: [],
-    exports: [],
+    exports: [ResponsiveElementDirective],
 })
 export class NgxResponsiveElementsModule {}
