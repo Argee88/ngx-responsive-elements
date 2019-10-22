@@ -1,0 +1,30 @@
+.default {
+    background-color: #ffc400;
+    &::after {
+        content: 'default';
+    }
+}
+.small {
+    background-color: #eb3301;
+    &::after {
+        content: 'small';
+    }
+}
+.medium {
+    background-color: #c300ff;
+    &::after {
+        content: 'medium';
+    }
+}
+.large {
+    background-color: #0c64e8;
+    &::after {
+        content: 'large';
+    }
+}
+.test {
+    background-color: #00ff6a;
+    &::after {
+        content: 'test';
+    }
+}
