@@ -1,6 +1,6 @@
 {
     "name": "ngx-responsive-elements",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Directive that adds responsive functionality to any element. Adds custom css classes for provided element widths to facilitate styling elements for different screen sizes.",
     "author": {
         "name": "René Galle"
